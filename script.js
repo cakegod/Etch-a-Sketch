@@ -2,7 +2,7 @@ let container = document.querySelector(".container");
 let resetButton = document.querySelector(".reset");
 let changeSize = document.querySelector(".change-size");
 let cells;
-let nColumns = 4;
+let nColumns = 10;
 let nCells = nColumns * nColumns;
 
 changeSize.addEventListener('click', () => {
@@ -36,10 +36,10 @@ function colorize() {
     cells = document.querySelectorAll(".cell");;
     cells.forEach((cell) => {
         cell.addEventListener("mouseover", () => {
-            cell.style.cssText = "background-color: black;";
+            let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+            cell.style.cssText = "background-color:" + randomColor;
         });
     });
 }
-
 
 colorize(createCells());
