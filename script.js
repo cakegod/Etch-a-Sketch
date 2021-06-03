@@ -33,7 +33,7 @@ function createCells() {
 };
 
 function colorize() {
-    cells = document.querySelectorAll(".cell");;
+    cells = document.querySelectorAll(".cell");
     cells.forEach((cell) => {
         cell.addEventListener("mouseover", () => {
             let randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
