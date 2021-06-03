@@ -1,3 +1,4 @@
+"use strict";
 let container = document.querySelector(".container");
 let resetButton = document.querySelector(".reset");
 let changeSize = document.querySelector(".change-size");
@@ -25,7 +26,7 @@ resetButton.addEventListener("click", () => {
 });
 
 function createCells() {
-    for (i = 0; i < nCells; i++) {
+    for (let i = 0; i < nCells; i++) {
         let cell = document.createElement("div");
         container.appendChild(cell);
         cell.classList.add("cell");
